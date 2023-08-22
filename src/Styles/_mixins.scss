@@ -1,0 +1,10 @@
+@import './variables';
+
+@mixin login-button{
+    background-color: $secondary-color;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border:none;
+    padding-top:0.75rem;
+    padding-bottom:0.75rem;
+}
