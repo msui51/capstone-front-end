@@ -1,6 +1,7 @@
 import React from 'react'
 import icon from '../../Assets/Icons/icons8-dance-60.png'
 import './header.scss';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -11,7 +12,9 @@ function Header() {
                 <img className='header__icon' src={icon} alt='figures dancing'></img>
             </div>
             <div className="header__wrapper--right">
-                <button className='header__button'>Log In</button>
+                <Link className='header__login-in-link' to='/login'>
+                  <button className='header__button'>Log In</button>
+                </Link>
             </div>
         </div>
     </div>
