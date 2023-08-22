@@ -3,6 +3,8 @@ import HomePagePic from '../../Assets/Images/capstone-pic-6.JPG';
 import './homePageMain.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { LockIcon } from '@chakra-ui/icons';
+
 
 
 function HomePageMain() {
@@ -10,6 +12,7 @@ function HomePageMain() {
     const clickHandlerChange=()=>{
         setLogin(true);
     }
+    
   return (
     <>
         <main className='homePage'>
@@ -18,22 +21,28 @@ function HomePageMain() {
                 <div className='homePage__wrapper--right--top'>
                     <Link className={!login ? 'homePage__link--login homePage__link--login--glow' : 'homePage__link--login'} to='/login' onClick={clickHandlerChange}>
                         {!login ? <h1 className='homePage__title'>Do you miss times like this?</h1>
-                        : <form className='homePage__login-form'>
-                            <div>
+                        : <div className='homePage__login-wrapper'>
+                            <div className='homePage__login-icon-title-wrapper'>
+                                <LockIcon className='homePage__login-icon' boxSize={30} color='#ff5733'/>
+                                <h1 className='homePage__login-title'>Log In</h1>
+                            </div>
+                            <form className='homePage__login-form'>
+                            
                             <label className='homePage__login-text'>Username :</label>
                             <input className='homePage__login-input' type='text' placeholder='create username...'></input><br></br>
-                            </div>
+                            
                             <div>
                             <label className='homePage__login-text'>Are you at least 18 years old?</label><br></br>
                             </div>
                             <div>
-                            <input className='homePage__login-checkbox' type='checkbox' name='yes' id='yes'></input>
+                            <input className='homePage__login-checkbox' type='checkbox' name='yes' id='yes' value='yes' ></input>
                             <label className='homePage__login-text' for='yes'>Yes</label>
-                            <input className='homePage__login-checkbox' type='checkbox'></input>
-                            <label className='homePage__login-text'>No</label><br></br>
+                            <input className='homePage__login-checkbox' type='checkbox' id='no' name='no' value='no'></input>
+                            <label className='homePage__login-text' for='no' >No</label><br></br>
                             </div>
                             <button className='homePage__login-button'>Log in</button>
-                          </form>}
+                          </form>
+                          </div>}
                     </Link>
                 </div>
                 <div className='homePage__wrapper--right--bottom'>
