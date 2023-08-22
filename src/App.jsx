@@ -1,7 +1,6 @@
 import AboutPage from './Pages/AboutPage/AboutPage';
 import ChatPage from './Pages/ChatPage/ChatPage';
 import HomePage from './Pages/HomePage/HomePage';
-import LoginPage from './Pages/LoginPage/LoginPage';
 import SelectionsPage from './Pages/SelectionsPage/SelectionsPage';
 import './app.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -11,7 +10,7 @@ function App() {
    <BrowserRouter>
     <Routes>
       <Route path='/' element={<HomePage/>}/>
-      <Route path='/login' element={<LoginPage/>}/>
+      <Route path='/login' element={<HomePage/>}/>
       <Route path='/about' element={<AboutPage/>}/>
       <Route path='/selections' element={<SelectionsPage/>}/>
       <Route path='/selections/:id' element={<SelectionsPage/>}/>
