@@ -1,0 +1,22 @@
+@import '../../Styles/variables';
+
+.about{
+    background-color: $primary-background;
+    &__top-section{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__pic-1{
+        width:45%;
+        height:35rem;
+    }
+    &__text{
+        font-size: 4rem;
+        padding-left: 3rem;
+    }
+    &__text--different{
+        color:$secondary-color;
+        font-style: italic;
+    }
+}
