@@ -1,0 +1,41 @@
+@import '../../Styles/variables';
+
+.about{
+    background-color: $primary-background;
+    &__top-section{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__pic{
+        width: 158%;
+        height:100%;
+        border-radius: 5px;
+    }
+    &__text{
+        font-size: 4rem;
+        padding-left: 3rem;
+        margin-right: 3rem;
+        animation-duration: 3s;
+        animation-name: slide-up;
+    }
+    @keyframes slide-up{
+        from{
+            margin-top: 100%;
+        }
+        to{
+            margin-top:5%;
+        }
+    }
+    &__text--different{
+        color:$secondary-color;
+        font-style: italic;
+    }
+    &__bottom-section{
+        display: flex;
+        align-items: center;
+    }
+    &__pic--bottom{
+        width:53%;
+    }
+}
