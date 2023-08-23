@@ -8,12 +8,25 @@
         align-items: center;
     }
     &__pic-1{
-        width:45%;
-        height:35rem;
+        width: 50%;
+        height:40%;
+        border-radius: 5px;
+
     }
     &__text{
         font-size: 4rem;
         padding-left: 3rem;
+        margin-right: 3rem;
+        animation-duration: 3s;
+        animation-name: slide-up;
+    }
+    @keyframes slide-up{
+        from{
+            margin-top: 100%;
+        }
+        to{
+            margin-top:5%;
+        }
     }
     &__text--different{
         color:$secondary-color;
