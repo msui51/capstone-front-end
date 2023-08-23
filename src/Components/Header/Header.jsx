@@ -8,7 +8,7 @@ function Header() {
     <div className='header'>
         <div className="header__wrapper">
             <div className="header__wrapper--left">
-                <h1 className='header__title'>You Should be Dancing</h1>
+                <h1 className='header__title'>You Should be <span className='header__title--different'>Dancing</span></h1>
                 <img className='header__icon' src={icon} alt='figures dancing'></img>
             </div>
             <div className="header__wrapper--right">
