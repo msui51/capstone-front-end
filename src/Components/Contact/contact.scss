@@ -1,0 +1,28 @@
+@import '../../Styles/variables';
+
+.contact{
+    background-color: $primary-background;
+    padding:3rem;
+    &__title{
+        margin:0;
+    }
+    &__form-wrapper{
+        margin: 1.5rem 6rem;
+        padding: 2rem 5rem;
+        border:1px solid grey;
+        background-color: white;
+        height: 60vh;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        height:50vh;
+    }
+    &__button-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button{
+        width: 25%;
+    }
+}
