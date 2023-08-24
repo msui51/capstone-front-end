@@ -1,8 +1,11 @@
 import React from 'react';
 import '../HomePageMain/homePageMain.scss';
 import { LockIcon } from '@chakra-ui/icons';
+import { useState } from 'react';
 
 function LogInForm() {
+  
+
   return (
     <div className='homePage__login-wrapper'>
                             <div className='homePage__login-icon-title-wrapper'>
@@ -16,11 +19,11 @@ function LogInForm() {
                             
                             <div>
                             <label className='homePage__login-text'>Are you at least 18 years old?</label><br></br>
-                            </div>
+                            </div>g
                             <div>
-                            <input className='homePage__login-checkbox' type='checkbox' name='yes' id='yes' value='yes' ></input>
+                            <input className='homePage__login-checkbox' type='radio' name='age' id='yes' value='yes'></input>
                             <label className='homePage__login-text' for='yes'>Yes</label>
-                            <input className='homePage__login-checkbox' type='checkbox' id='no' name='no' value='no'></input>
+                            <input className='homePage__login-checkbox' type='radio' id='no' name='age' value='no'></input>
                             <label className='homePage__login-text' for='no' >No</label><br></br>
                             </div>
                             <button className='homePage__login-button'>Log in</button>

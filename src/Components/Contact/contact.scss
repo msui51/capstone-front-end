@@ -1,4 +1,5 @@
 @import '../../Styles/variables';
+@import '../../Styles/mixins';
 
 .contact{
     background-color: $primary-background;
@@ -8,21 +9,37 @@
     }
     &__form-wrapper{
         margin: 1.5rem 6rem;
-        padding: 2rem 5rem;
+        padding: 2rem 6rem;
         border:1px solid grey;
         background-color: white;
-        height: 60vh;
+        height: 70vh;
+        border-radius: 0.5rem;
     }
     &__form{
         display: flex;
         flex-direction: column;
         height:50vh;
     }
+    &__input{
+        margin:1.5rem 0 0.5rem;
+        padding: 0.5rem 0.5rem 0.5rem;
+        border-radius: 0.5rem;
+        &:first-of-type{
+            margin-top: 0.5rem;
+        }
+    }
+    &__input--long{
+        padding-bottom: 3rem;
+    }
     &__button-wrapper{
         display: flex;
         justify-content: space-between;
     }
     &__button{
+        margin-top: 1.5rem;
         width: 25%;
+    }
+    &__button-send{
+        @include login-button;
     }
 }
