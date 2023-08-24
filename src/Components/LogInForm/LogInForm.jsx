@@ -4,7 +4,10 @@ import { LockIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 
 function LogInForm() {
-  
+const [username, setUsername] = useState('');
+const usernameChangeHandler=(e)=>{
+  setUsername(e.target.value);
+}
 
   return (
     <div className='homePage__login-wrapper'>
@@ -15,11 +18,11 @@ function LogInForm() {
                             <form className='homePage__login-form'>
                             
                             <label className='homePage__login-text'>Username :</label>
-                            <input className='homePage__login-input' type='text' placeholder='create username...'></input><br></br>
+                            <input className='homePage__login-input' type='text' onChange={usernameChangeHandler}></input><br></br>
                             
                             <div>
                             <label className='homePage__login-text'>Are you at least 18 years old?</label><br></br>
-                            </div>g
+                            </div>
                             <div>
                             <input className='homePage__login-checkbox' type='radio' name='age' id='yes' value='yes'></input>
                             <label className='homePage__login-text' for='yes'>Yes</label>
