@@ -96,6 +96,7 @@
     &__login-button{
         @include login-button;
         margin-top: 1rem;
+        width: 100%;
         &:hover{
             cursor: pointer;
         }

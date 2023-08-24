@@ -2,6 +2,7 @@ import React from 'react';
 import '../HomePageMain/homePageMain.scss';
 import { LockIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function LogInForm() {
 const [username, setUsername] = useState('');
@@ -29,7 +30,7 @@ const usernameChangeHandler=(e)=>{
                             <input className='homePage__login-checkbox' type='radio' id='no' name='age' value='no'></input>
                             <label className='homePage__login-text' for='no' >No</label><br></br>
                             </div>
-                            <button className='homePage__login-button'>Log in</button>
+                            <Link className='homePage__login-link' to='/selections' username={username}><button className='homePage__login-button'>Log in</button></Link>
                           </form>
                           </div>
   )

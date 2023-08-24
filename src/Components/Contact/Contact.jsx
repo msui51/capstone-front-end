@@ -22,8 +22,9 @@ function Contact() {
     setMessage(e.target.value);
     console.log(message);
   }
-  const scrollTo=()=>{
-    window.scrollTo(0,100);
+  const navigateHome=(e)=>{
+    e.preventDefault();
+    navigate('/');
   }
   const handleSubmit=(event)=>{
     event.preventDefault();
@@ -49,7 +50,7 @@ function Contact() {
         <h1 className='contact__title'>Contact Us</h1>
         <div className='contact__form-wrapper'>
           <p>Please fill out this form and we'll get back to you as soon as possible</p>
-            <form className='contact__form'>
+            <form className='contact__form' onSubmit={handleSubmit}>
                 <input 
                   className='contact__input'
                   type='text'
@@ -89,8 +90,8 @@ function Contact() {
                     Message
                 </label>
                 <div className='contact__button-wrapper'>
-                    <button className='contact__button contact__button-send' type='submit' onSubmit={handleSubmit}>Send</button>
-                    <button className='contact__button contact__button-cancel' type='submit' onClick={scrollTo}>Cancel</button>
+                    <button className='contact__button contact__button-send' type='submit'>Send</button>
+                    <button className='contact__button contact__button-cancel' type='submit' onClick={navigateHome}>Cancel</button>
                 </div>
             </form>
         </div>
