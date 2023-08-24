@@ -42,4 +42,7 @@
     &__button-send{
         @include login-button;
     }
+    &__button-cancel{
+        @include cancel-button;
+    }
 }
