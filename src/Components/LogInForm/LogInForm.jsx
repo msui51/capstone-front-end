@@ -18,7 +18,7 @@ const usernameChangeHandler=(e)=>{
                             <form className='homePage__login-form'>
                             
                             <label className='homePage__login-text'>Username :</label>
-                            <input className='homePage__login-input' type='text' onChange={usernameChangeHandler}></input><br></br>
+                            <input className='homePage__login-input' type='text' onChange={usernameChangeHandler} value={username}></input><br></br>
                             
                             <div>
                             <label className='homePage__login-text'>Are you at least 18 years old?</label><br></br>
