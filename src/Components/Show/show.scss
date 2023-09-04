@@ -1,0 +1,19 @@
+@import '../../Styles/variables';
+
+.show{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    border-top: 1px solid lightslategray;
+    &--hover{
+        cursor: pointer;
+        background-color: $secondary-color;
+        border-radius: 2px;
+        transition: background-color 500ms;
+    }
+    &__detail{
+    width:25%;
+    margin: 1.5rem 0;
+    }
+    
+}

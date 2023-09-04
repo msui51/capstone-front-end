@@ -1,17 +1,17 @@
 @import './variables';
 
 @mixin login-button{
-    // background-color: $secondary-color;
+    background-color: $secondary-color;
     font-weight: bold;
     border-radius: 0.5rem;
     border:none;
     padding-top:0.75rem;
     padding-bottom:0.75rem;
-    background: rgba(255,87,51,0.0);
+    // background: rgba(255,87,51,0.0);
     &:hover{
         cursor: pointer;
-        transition: background 500ms;
-        background:rgba(255,87,51,1)
+        // transition: background 500ms;
+        // background:rgba(255,87,51,1)
     }
 }
 

@@ -30,7 +30,7 @@ const usernameChangeHandler=(e)=>{
                             <input className='homePage__login-checkbox' type='radio' id='no' name='age' value='no'></input>
                             <label className='homePage__login-text' for='no' >No</label><br></br>
                             </div>
-                            <Link className='homePage__login-link' to='/selections' username={username}><button className='homePage__login-button'>Log in</button></Link>
+                            <Link className='homePage__login-link' to='/selections' state={username}><button className='homePage__login-button'>Log in</button></Link>
                           </form>
                           </div>
   )

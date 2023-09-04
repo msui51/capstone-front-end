@@ -1,0 +1,32 @@
+@import '../../Styles/mixins';
+
+.showList{
+    padding:1rem 2rem 0 2rem;
+    &__back-link{
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__title{
+        padding-left: 0.5rem;
+    }
+    &__wrapper{
+        margin: 0 0 0 5rem;
+        border: 1px solid lightslategray;
+        border-radius: 4px;
+    }
+    &__sub-titles-wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 1rem;
+    }
+    &__sub-titles{
+        display: inline;
+        width: 25%;
+    }
+    &__show-link{
+        text-decoration: none;
+        color:black;
+    }
+}

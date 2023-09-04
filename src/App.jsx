@@ -15,7 +15,7 @@ function App() {
       <Route path='/about' element={<AboutPage/>}/>
       <Route path='/selections' element={<SelectionsPage/>}/>
       <Route path='/selections/:id' element={<SelectionsPage/>}/>
-      <Route path='/selections/:id/chat' element={<ChatPage/>}/>
+      <Route path='/chat/:dj/:date' element={<ChatPage/>}/>
     </Routes>
    </BrowserRouter>
   )
