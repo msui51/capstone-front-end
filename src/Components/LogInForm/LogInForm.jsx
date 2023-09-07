@@ -8,47 +8,37 @@ import Modal from '../Modal/Modal';
 
 
 function LogInForm({socket}) {
-const [username, setUsername] = useState('');
-const [open, setOpen] = useState(false);
-const [age, setAge] = useState('');
-const navigate = useNavigate();
-// const changeAgeHandler=(e)=>{
-//   setAge(e.target.value);
-//   console.log(age);
-// }
-const usernameChangeHandler=(e)=>{
-  setUsername(e.target.value);
-}
+  const [username, setUsername] = useState('');
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const usernameChangeHandler=(e)=>{
+    setUsername(e.target.value);
+  }
   const checkBelowEighteenAge=()=>{
     const button= document.getElementsByName('age');
-    if(button.value === 'no'){
-      return true;
-    }
-    console.log(button.value)
+      for(let i = 0; i < button.length; i++) {
+        if(button[i].checked && button[i].value == 'no'){
+          return true;
+        }
+      } 
   }
   const handleSubmit=(e)=>{
     e.preventDefault();
     localStorage.setItem('username',username);
-    socket.emit('newUser', {username, socketID: socket.id})
+    socket.emit('newUser', {
+      name: username, 
+      id: socket.id,
+    })
     console.log(username)
-    navigate('/selections')
     if(checkBelowEighteenAge()){
       setOpen(true)
     }else{
     navigate('/selections');
     }
   }
-  // const openModal=()=>{
-  //   if(checkBelowEighteenAge()){
-  //     setOpen(true);
-  //   }
-  // }
   const closeModal=()=>{
     setOpen(false);
   }
-
-
-
 
   return (
     <div className='logInForm'>

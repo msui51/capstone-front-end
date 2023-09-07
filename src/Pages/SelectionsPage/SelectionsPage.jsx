@@ -16,7 +16,6 @@ function SelectionsPage() {
     axios.get('http://localhost:5000/selections')
     .then((response)=>{
       setGenres(response.data);
-      console.log(genres)
     });
   },[]);
 

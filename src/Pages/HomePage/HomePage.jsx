@@ -6,7 +6,7 @@ import LogInForm from '../../Components/LogInForm/LogInForm';
 import HomeImg from '../../Components/HomeImg/HomeImg';
 import LoginPage from '../LoginPage/LoginPage';
 
-function HomePage({socket}) {
+function HomePage() {
   const location = useLocation();
 
   return (
@@ -17,7 +17,7 @@ function HomePage({socket}) {
                 <div className='homePage__wrapper--right--top'>
                 <Link className='homePage__link--login' to='/login'> 
                     {location.pathname === '/' ? <h1 className='homePage__title'>Do you miss times like this?</h1>
-                        : location.pathname === '/login' ? <LoginPage socket={socket}/>
+                        : location.pathname === '/login' ? <LoginPage />
                         : null}
                 </Link>   
                     {/* // <Link className='homePage__link--login' to='/login' onClick={clickHandlerChange}>

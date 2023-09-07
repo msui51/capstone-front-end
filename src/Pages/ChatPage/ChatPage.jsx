@@ -8,16 +8,36 @@ import Header from '../../Components/Header/Header';
 import ChatSideBar from '../../Components/ChatSideBar/ChatSideBar';
 
 function ChatPage({socket}) {
-  const [messages, setMessages]=useState([]);
+  const [message, setMessage]=useState('');
+  const [messageReceived, setMessageReceived]=useState([])
+  const [users, setUsers]=useState([]);
+  const handleMessageChange=(e)=>{
+    e.preventDefault();
+    setMessage(e.target.value);
+  }
+ const sendMessage=()=>{
+    socket.emit('send_message', {
+      message: message,
+      name: localStorage.getItem('username'),
+      id: socket.id,
+    });
+    setMessage('');
+ }
 
-  useEffect(()=>{
-    socket.on('connect', ()=>{
-      console.log(`you connected with id: ${socket.id}`)
-    })
-  },[])
-  useEffect(()=>{
-    socket.on('messageResponse', (msg) => setMessages([...messages, msg]))
-  },[socket,messages])
+ useEffect(()=>{
+  socket.on('receive_message',(data)=>{
+    setMessageReceived([...messageReceived, data])
+  })  
+ },[socket, messageReceived])
+
+ useEffect(()=>{
+  socket.on('newUsers_response', (data)=>{
+    setUsers([...users, data])
+  })
+  console.log(users)
+ }, [socket, users])
+
+
   // const {dj} = useParams();
   // const {messages, sendMessage}=useChat(dj);
   // const [newMessage, setNewMessage]=useState('');
@@ -29,13 +49,21 @@ function ChatPage({socket}) {
   //   setNewMessage(newMessage);
   //   setNewMessage('');
   // }
+  // useEffect(()=>{
+  //   socket.on('connect', ()=>{
+  //     console.log(`you connected with id: ${socket.id}`)
+  //   })
+  // },[])
+  // useEffect(()=>{
+  //   socket.on('messageResponse', (msg) => setMessages([...messages, msg]))
+  // },[socket,messages])
   return (
     <div className='chatPage'>
-      <ChatSideBar socket={socket}/>
+      <ChatSideBar users={users}/>
       <div className='chatPage__main'>
           <Header/>
-          <ChatBody messages={messages}/>
-          <ChatFooter socket={socket}/>
+          <ChatBody messageReceived={messageReceived}/>
+          <ChatFooter message={message} sendMessage={sendMessage} handleMessageChange={handleMessageChange}/>
       </div>
     </div>
   )
