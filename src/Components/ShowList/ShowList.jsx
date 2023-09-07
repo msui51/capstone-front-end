@@ -14,7 +14,7 @@ function ShowList({shows}) {
       <div className='showList__link-wrapper'>
       <Link className='showList__back-link' to='/selections'>
         <div className='showList__icon'>
-        <ArrowBackIcon boxSize={32} color='black'/>
+        <ArrowBackIcon boxSize={32} color='#884AB2'/>
         </div>
         <h1 className='showList__title'>GENRE</h1>  
       </Link>    

@@ -11,6 +11,9 @@
         border-radius: 2px;
         transition: background-color 500ms;
         color:white;
+        &:focus{
+            background-color: #ff2d00;
+        }
     }
     &__detail{
     width:25%;

@@ -6,7 +6,7 @@
     padding:3rem;
     &__title{
         margin:0;
-        color: $header-background;
+        color: $third-color;
     }
     &__form-wrapper{
         margin: 1.5rem 6rem;
@@ -35,6 +35,16 @@
         }
         &:focus{
             outline:1px solid $third-color;
+        }
+    }
+    &__input-error{
+        margin:1.5rem 0 0.5rem;
+        padding: 0.5rem 0.5rem 0.5rem;
+        border-radius: 0.5rem;
+        border: none;
+        // border: 1px solid #f18f01;
+        &:focus{
+            outline: 1px solid #f18f01;
         }
     }
     &__input--long{

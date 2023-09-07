@@ -5,15 +5,25 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './logInForm.scss';
 import Modal from '../Modal/Modal';
+import ModalUsername from '../Modal/ModalUsername';
 
 
 function LogInForm({socket}) {
   const [username, setUsername] = useState('');
   const [open, setOpen] = useState(false);
+  const [openUsernameModal, setOpenUsernameModal] = useState(false);
   const navigate = useNavigate();
   const usernameChangeHandler=(e)=>{
     setUsername(e.target.value);
   }
+  // const radioButtonNotSelected=()=>{
+  //   const button = document.getElementsByName('age');
+  //   for(let i = 0; i < button.length; i++){
+  //     if(!button[i].checked){
+  //       return true
+  //     }
+  //   }
+  // }
   const checkBelowEighteenAge=()=>{
     const button= document.getElementsByName('age');
       for(let i = 0; i < button.length; i++) {
@@ -22,6 +32,12 @@ function LogInForm({socket}) {
         }
       } 
   }
+  // const isLoginFormValid=()=>{
+  //   if(!username || radioButtonNotSelected()){
+  //     return false;
+  //   }
+  //   return true;
+  // }
   const handleSubmit=(e)=>{
     e.preventDefault();
     localStorage.setItem('username',username);
@@ -30,6 +46,9 @@ function LogInForm({socket}) {
       id: socket.id,
     })
     console.log(username)
+    // if(!isLoginFormValid()){
+    //   alert('please provide all inputs')
+    // }else 
     if(checkBelowEighteenAge()){
       setOpen(true)
     }else{

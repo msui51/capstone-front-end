@@ -17,7 +17,7 @@
     }
     &__title{
         padding-left: 0.5rem;
-        color: $header-background;
+        color: $third-color;
     }
     &__wrapper{
         margin: 0 4rem 0 3rem;
@@ -32,8 +32,8 @@
     }
     &__sub-titles{
         display: inline;
-        width: 25%;
-        
+        width: 25%;   
+        color: darkslategray; 
     }
     &__show-link{
         text-decoration: none;
