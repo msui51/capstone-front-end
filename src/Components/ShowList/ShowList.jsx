@@ -14,7 +14,7 @@ function ShowList({shows}) {
       <div className='showList__link-wrapper'>
       <Link className='showList__back-link' to='/selections'>
         <div className='showList__icon'>
-        <ArrowBackIcon boxSize={32}/>
+        <ArrowBackIcon boxSize={32} color='black'/>
         </div>
         <h1 className='showList__title'>GENRE</h1>  
       </Link>    
@@ -28,7 +28,7 @@ function ShowList({shows}) {
           <h2 className='showList__sub-titles'>Dates</h2>
         </div>
         {shows.map((show)=>(
-          <Link className='showList__show-link' to={`/chat/${show.dj}/${show.date}`}>
+          <Link className='showList__show-link' to={`/${show.dj}`}>
             <Show 
                 key={show.shows_id}
                 id={show.shows_id}

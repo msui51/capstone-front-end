@@ -5,17 +5,20 @@ import SelectionsPage from './Pages/SelectionsPage/SelectionsPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import './app.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import socketIO from 'socket.io-client';
+const socket= socketIO.connect('http://localhost:5000');
 
 function App() {
+  
   return (
    <BrowserRouter>
     <Routes>
-      <Route path='/' element={<HomePage/>}/>
-      <Route path='/login' element={<LoginPage/>}/>
+      <Route path='/' element={<HomePage socket={socket}/>}/>
+      <Route path='/login' element={<LoginPage socket={socket}/>}/>
       <Route path='/about' element={<AboutPage/>}/>
-      <Route path='/selections' element={<SelectionsPage/>}/>
+      <Route path='/selections' element={<SelectionsPage />}/>
       <Route path='/selections/:id' element={<SelectionsPage/>}/>
-      <Route path='/chat/:dj/:date' element={<ChatPage/>}/>
+      <Route path='/:dj' element={<ChatPage socket={socket}/>}/>
     </Routes>
    </BrowserRouter>
   )

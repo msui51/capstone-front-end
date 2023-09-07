@@ -1,24 +1,38 @@
 import React from 'react'
 import LogInForm from '../../Components/LogInForm/LogInForm';
-import '../../Components/HomePageMain/homePageMain.scss';
 import { Link } from 'react-router-dom';
-import HomePagePic from '../../Assets/Images/capstone-pic-6.JPG';
+import { useState, useRef } from 'react';
+import HomeImg from '../../Components/HomeImg/HomeImg';
+import '../LoginPage/loginPage.scss';
+import Modal from '../../Components/Modal/Modal';
 
-function LoginPage() {
+function LoginPage({socket}) {
+  // const [open, setOpen] = useState(false);
+  // const checkBelowEighteenAge=()=>{
+  //   const button= document.getElementsByName('age');
+  //   if(button.checked === 'no'){
+  //     return true;
+  //   }
+  // }
+  // const openModal=()=>{
+  //   if(checkBelowEighteenAge){
+  //     setOpen(true);
+  //   }
+  // }
   return (
-        <main className='homePage'>
-          <img className='homePage__pic' src={HomePagePic} alt='people dancing'></img>
-          <div className='homePage__wrapper--right'>
-            <div className='homePage__wrapper--right--top'>
-              <LogInForm/>
+        <main className='loginPage'>
+          <HomeImg/>
+          <div className='loginPage__wrapper--right'>
+            <div className='loginPage__wrapper--right--top'>
+              <LogInForm socket={socket}/>
             </div>
-            <div className='homePage__wrapper--right--bottom'>
-              <footer className='homePage__footer'>
-                <Link className='homePage__footer-link' to='/about'>
-                  <small className='homePage__footer-text'>About Us</small>
+            <div className='loginPage__wrapper--right--bottom'>
+              <footer className='loginPage__footer'>
+                <Link className='loginPage__footer-link' to='/about'>
+                  <small className='loginPage__footer-text'>About Us</small>
                 </Link>
-                <Link className='homePage__footer-link' to='/about'>
-                  <small className='homePage__footer-text'>Contact Us</small>
+                <Link className='loginPage__footer-link'>
+                  <small className='loginPage__footer-text'>Contact Us</small>
                 </Link>
               </footer>
             </div>

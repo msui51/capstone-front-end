@@ -1,15 +1,13 @@
 import React from 'react'
-import HeaderContact from '../../Components/Header/HeaderContact';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import './selectionsPage.scss';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 import ShowList from '../../Components/ShowList/ShowList';
 import GenreList from '../../Components/GenreList/GenreList';
+import Header from '../../Components/Header/Header';
 
 function SelectionsPage() {
-  // const location = useLocation();
-  // const username = location.state;
   const [genres, setGenres] = useState([]);
   const [shows, setShows] = useState([]);
   const {id} = useParams();
@@ -18,6 +16,7 @@ function SelectionsPage() {
     axios.get('http://localhost:5000/selections')
     .then((response)=>{
       setGenres(response.data);
+      console.log(genres)
     });
   },[]);
 
@@ -31,7 +30,7 @@ function SelectionsPage() {
 
   return (
     <>
-      <HeaderContact/>
+      <Header/>
       <div className='selections'>       
         {id ? <ShowList shows={shows}/> :
             <GenreList genres={genres}/>

@@ -6,11 +6,12 @@
     padding:3rem;
     &__title{
         margin:0;
+        color: $header-background;
     }
     &__form-wrapper{
         margin: 1.5rem 6rem;
         padding: 2rem 6rem;
-        border:1px solid grey;
+        border:1px solid lightgrey;
         background-color: white;
         height: 70vh;
         border-radius: 0.5rem;
@@ -24,8 +25,16 @@
         margin:1.5rem 0 0.5rem;
         padding: 0.5rem 0.5rem 0.5rem;
         border-radius: 0.5rem;
+        border:none;
+        border:1px solid lightgray;
         &:first-of-type{
             margin-top: 0.5rem;
+        }
+        &:hover{
+            border-color: $third-color;
+        }
+        &:focus{
+            outline:1px solid $third-color;
         }
     }
     &__input--long{

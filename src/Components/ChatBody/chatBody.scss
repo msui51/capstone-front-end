@@ -1,0 +1,21 @@
+@import '../../Styles/variables';
+.chatBody{
+    height:100%;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    margin-right: 2.8rem;
+    &__messages{
+        padding: 0 2rem;
+        width: fit-content;
+    }
+    &__message{
+        padding: 0 1rem;
+    }
+    &__sender{
+        border: 1px solid $third-color;
+        border-radius: 20px;
+        background-color: $third-color;
+        color:white;
+    }
+}

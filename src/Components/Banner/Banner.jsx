@@ -3,12 +3,11 @@ import './banner.scss';
 import { useLocation } from 'react-router-dom';
 
 function Banner() {
-    const location = useLocation();
-    const username = location.state;
+    const username=localStorage.getItem('username');
   return (
     <>
         <h1 className='banner'>
-            Hi {username},<br></br>
+            Hi <span className='banner__title--emphasis'>{username}</span>,<br></br>
             what do you want to <span className='banner__title--emphasis'>vibe</span> to?
         </h1>
     </>

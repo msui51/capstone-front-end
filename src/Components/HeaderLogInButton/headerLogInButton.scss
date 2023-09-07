@@ -1,0 +1,11 @@
+@import '../../Styles/mixins';
+
+.headerLogInButton{
+    &__button{
+        @include login-button;
+        width: 9rem;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

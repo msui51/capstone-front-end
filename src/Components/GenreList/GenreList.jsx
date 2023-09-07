@@ -9,10 +9,10 @@ function GenreList({genres}) {
     <>
         <Banner/>
         <div className='genreList'>
-            <div className='genreList__wrapper'>
+            <ul className='genreList__wrapper'>
               {genres.map((genre) =>(
-                <div className='genreList__item'>
-                <Link to={`/selections/${genre.music_genre_id}`}>
+                <li className='genreList__item'>
+                <Link className='genreList__link' to={`/selections/${genre.music_genre_id}`}>
                 <Genre
                   key={genre.music_genre_id}
                   id={genre.music_genre_id}
@@ -20,9 +20,9 @@ function GenreList({genres}) {
                   image={genre.image}
                 />
                 </Link>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
 
             <div className='genreList__images'>
               <img className='genreList__image'src='http://localhost:5000/images/tech-house.jpeg' alt='rave venue'></img>

@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderLogIn from '../../Components/Header/HeaderLogIn';
+import Header from '../../Components/Header/Header';
 import AboutPagePic2 from '../../Assets/Images/capstone-pic-1.JPG';
 import './aboutPage.scss';
 import AboutPagePic1 from '../../Assets/Images/capstone-pic-7.jpg';
@@ -8,7 +8,7 @@ import Contact from '../../Components/Contact/Contact';
 function AboutPage() {
   return (
     <>
-      <HeaderLogIn/>
+      <Header/>
       <main className='about'>
         <div className='about__top-section'>
           <img className='about__pic' src={AboutPagePic1} alt='friends hugging'></img>
