@@ -5,6 +5,7 @@ import { useState, useRef } from 'react';
 import HomeImg from '../../Components/HomeImg/HomeImg';
 import '../LoginPage/loginPage.scss';
 import Modal from '../../Components/Modal/Modal';
+import { HashLink } from 'react-router-hash-link';
 
 function LoginPage({socket}) {
   // const [open, setOpen] = useState(false);
@@ -31,9 +32,9 @@ function LoginPage({socket}) {
                 <Link className='loginPage__footer-link' to='/about'>
                   <small className='loginPage__footer-text'>About Us</small>
                 </Link>
-                <Link className='loginPage__footer-link'>
+                <HashLink className='loginPage__footer-link' smooth to='/about#contact'>
                   <small className='loginPage__footer-text'>Contact Us</small>
-                </Link>
+                </HashLink>
               </footer>
             </div>
           </div>

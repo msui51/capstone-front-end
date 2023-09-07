@@ -1,13 +1,13 @@
 import React from 'react'
 import './headerContactButton.scss';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 function HeaderContactButton() {
   return (
     <>
-        <Link className='headerContactButton' to='/about'>
+        <HashLink className='headerContactButton' smooth to='/about#contact'>
             <button className='headerContactButton__button'>Contact Us</button>
-        </Link>
+        </HashLink>
     </>
   )
 }

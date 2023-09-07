@@ -5,8 +5,9 @@
     border: 1px solid lightgray;
     border-radius: 0.5rem;
     margin-right: 2.8rem;
+    overflow: auto;
     &__messages{
-        padding: 0 2rem;
+        padding: 0 2rem 0.5rem 2rem;
         width: fit-content;
     }
     &__message{
