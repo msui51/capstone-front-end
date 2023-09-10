@@ -5,8 +5,10 @@ import './showList.scss';
 import Banner from '../Banner/Banner';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 
-function ShowList({shows}) {
-
+function ShowList({shows, socket}) {
+  const connectToSocket=()=>{
+    socket.connect();
+  }
   return (
     <>
     <Banner/>
@@ -28,7 +30,7 @@ function ShowList({shows}) {
           <h2 className='showList__sub-titles'>Dates</h2>
         </div>
         {shows.map((show)=>(
-          <Link className='showList__show-link' to={`/${show.dj}`}>
+          <Link className='showList__show-link' onClick={connectToSocket} to={`/${show.dj}`}>
             <Show 
                 key={show.shows_id}
                 id={show.shows_id}

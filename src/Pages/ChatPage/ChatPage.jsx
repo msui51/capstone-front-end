@@ -8,6 +8,7 @@ import Header from '../../Components/Header/Header';
 import ChatSideBar from '../../Components/ChatSideBar/ChatSideBar';
 
 function ChatPage({socket}) {
+  const { id, dj }= useParams();
   const [message, setMessage]=useState('');
   const [messageReceived, setMessageReceived]=useState([])
   const [users, setUsers]=useState([]);
@@ -18,7 +19,7 @@ function ChatPage({socket}) {
  const sendMessage=()=>{
     socket.emit('send_message', {
       message: message,
-      name: localStorage.getItem('username'),
+      name: sessionStorage.getItem('username'),
       id: socket.id,
     });
     setMessage('');
@@ -59,7 +60,7 @@ function ChatPage({socket}) {
   // },[socket,messages])
   return (
     <div className='chatPage'>
-      <ChatSideBar users={users}/>
+      {/* <ChatSideBar users={users}/> */}
       <div className='chatPage__main'>
           <Header/>
           <ChatBody messageReceived={messageReceived}/>

@@ -6,7 +6,7 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import './app.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import io from 'socket.io-client';
-const socket= io.connect('http://localhost:5000');
+const socket= io.connect('http://localhost:5000', {autoConnect: false});
 
 function App() {
   
@@ -16,8 +16,8 @@ function App() {
       <Route path='/' element={<HomePage/>}/>
       <Route path='/login' element={<LoginPage socket={socket}/>}/>
       <Route path='/about' element={<AboutPage/>}/>
-      <Route path='/selections' element={<SelectionsPage />}/>
-      <Route path='/selections/:id' element={<SelectionsPage/>}/>
+      <Route path='/selections' element={<SelectionsPage socket={socket} />}/>
+      <Route path='/selections/:id' element={<SelectionsPage socket={socket}/>}/>
       <Route path='/:dj' element={<ChatPage socket={socket}/>}/>
     </Routes>
    </BrowserRouter>

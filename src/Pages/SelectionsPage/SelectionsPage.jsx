@@ -7,7 +7,7 @@ import ShowList from '../../Components/ShowList/ShowList';
 import GenreList from '../../Components/GenreList/GenreList';
 import Header from '../../Components/Header/Header';
 
-function SelectionsPage() {
+function SelectionsPage({socket}) {
   const [genres, setGenres] = useState([]);
   const [shows, setShows] = useState([]);
   const {id} = useParams();
@@ -31,7 +31,7 @@ function SelectionsPage() {
     <>
       <Header/>
       <div className='selections'>       
-        {id ? <ShowList shows={shows}/> :
+        {id ? <ShowList shows={shows} socket={socket}/> :
             <GenreList genres={genres}/>
         }  
       </div>

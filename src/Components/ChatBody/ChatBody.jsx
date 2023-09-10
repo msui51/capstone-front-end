@@ -5,17 +5,17 @@ function ChatBody({messageReceived}) {
   return (
     <div className='chatBody'>
         {messageReceived.map((message)=>
-        message.name === localStorage.getItem('username') ? (
+        message.name === sessionStorage.getItem('username') ? (
         <div className='chatBody__messages'key={message.id}>
             <p className='chatBody__name' >{message.name}</p>
-            <div className='chatBody__message chatBody__sender'>
+            <div className='chatBody__message chatBody__message-sender'>
                 <p>{message.message}</p>
             </div>
         </div>
         ) : (
-        <div className='chatBody__messages' key={message.id}>
+        <div className='chatBody__messages chatBody__messages-recipient' key={message.id}>
             <p className='chatBody__name'>{message.name}</p>
-            <div className='chatBody__message chatBody__recipient'>
+            <div className='chatBody__message chatBody__message-recipient'>
                 <p>{message.message}</p>
             </div>
         </div>

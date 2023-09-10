@@ -40,9 +40,9 @@ function LogInForm({socket}) {
   // }
   const handleSubmit=(e)=>{
     e.preventDefault();
-    localStorage.setItem('username',username);
-    socket.emit('newUser', {
-      name: username, 
+    sessionStorage.setItem('username', username);
+    socket.emit('newUsers', {
+      name: sessionStorage.getItem('username'),
       id: socket.id,
     })
     console.log(username)

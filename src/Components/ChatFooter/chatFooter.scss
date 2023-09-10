@@ -2,9 +2,11 @@
 @import '../../Styles//variables';
 
 .chatFooter{
-    width:98%;
+    // width:98%;
+    width: 95%;
     display: flex;
     margin-bottom: 3rem;
+    margin-left: 2.8rem;
     &__input{
         width: 82%;
         border-radius: 0.5rem;

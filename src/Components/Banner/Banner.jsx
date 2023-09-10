@@ -3,7 +3,7 @@ import './banner.scss';
 import { useLocation } from 'react-router-dom';
 
 function Banner() {
-    const username=localStorage.getItem('username');
+    const username=sessionStorage.getItem('username');
   return (
     <>
         <h1 className='banner'>
