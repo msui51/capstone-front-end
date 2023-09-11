@@ -3,6 +3,9 @@ import './headerContactButton.scss';
 import { HashLink } from 'react-router-hash-link';
 
 function HeaderContactButton() {
+
+//contact button for header
+
   return (
     <>
         <HashLink className='headerContactButton' smooth to='/about#contact'>

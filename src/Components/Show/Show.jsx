@@ -1,13 +1,18 @@
 import React from 'react'
 import './show.scss';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 function Show({dj, venue, city, state, date}) {
   const [hover, setHover] = useState(null);
+
+  // change state when mouse is on element
+
   const mouseOverHoverHandler=()=>{
     setHover(true);
   }
+
+  // change state when mouse os not on element
+
   const mouseOutHandler=()=>{
     setHover(false);
   }

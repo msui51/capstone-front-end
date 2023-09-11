@@ -14,7 +14,7 @@
     }
     &__link--login{
         text-decoration: none;
-        color:#323232;
+        color:$homePage-link-color;
     }
     &__title{
         font-size: 3.7rem;
@@ -31,12 +31,9 @@
         background-clip: border-box;
         background-size: 200% auto;
         color: #fff;
-        // background-clip: text;
-        // text-fill-color: transparent;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: textclip 2s linear infinite;
-        // display: inline-block;
         &:hover{
             cursor:pointer;
         }
@@ -61,12 +58,12 @@
     }
     &__footer-link{
         text-decoration: none;
-        color:#323232;
+        color:$homePage-link-color;
     }
     &__footer-text{
         padding-bottom: 0.5rem;
         &:hover{
-            border-bottom: 1px solid darkslategray;
+            border-bottom: 1px solid $border-color;
         }
     }
 }

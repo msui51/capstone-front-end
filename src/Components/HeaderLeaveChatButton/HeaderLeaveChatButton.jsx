@@ -4,6 +4,9 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function HeaderLeaveChatButton() {
     const navigate = useNavigate();
+
+  //going back to previous page
+
     const backPage=()=>{
         navigate(-1);
     }

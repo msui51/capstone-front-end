@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './selectionsPage.scss';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
@@ -12,12 +12,17 @@ function SelectionsPage({socket}) {
   const [shows, setShows] = useState([]);
   const {id} = useParams();
 
+
+//grabbing data for list of genres
+
   useEffect(()=>{
     axios.get('http://localhost:5000/selections')
     .then((response)=>{
       setGenres(response.data);
     });
   },[]);
+
+// grabbing data for list of shows
 
   useEffect(()=>{
     axios.get(`http://localhost:5000/selections/${id}`)

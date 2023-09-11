@@ -2,6 +2,8 @@ import React from 'react';
 import './chatSideBar.scss'
 
 function ChatSideBar({users}) {
+
+  //display active users
    
   return (
     <div className='chatSideBar'>

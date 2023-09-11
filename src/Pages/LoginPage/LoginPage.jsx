@@ -1,25 +1,14 @@
 import React from 'react'
 import LogInForm from '../../Components/LogInForm/LogInForm';
 import { Link } from 'react-router-dom';
-import { useState, useRef } from 'react';
 import HomeImg from '../../Components/HomeImg/HomeImg';
 import '../LoginPage/loginPage.scss';
-import Modal from '../../Components/Modal/Modal';
 import { HashLink } from 'react-router-hash-link';
 
 function LoginPage({socket}) {
-  // const [open, setOpen] = useState(false);
-  // const checkBelowEighteenAge=()=>{
-  //   const button= document.getElementsByName('age');
-  //   if(button.checked === 'no'){
-  //     return true;
-  //   }
-  // }
-  // const openModal=()=>{
-  //   if(checkBelowEighteenAge){
-  //     setOpen(true);
-  //   }
-  // }
+
+  //includes home image and log in form
+  
   return (
         <main className='loginPage'>
           <HomeImg/>

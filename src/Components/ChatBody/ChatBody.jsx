@@ -2,6 +2,9 @@ import React from 'react';
 import './chatBody.scss';
 
 function ChatBody({messageReceived}) {
+
+//display messages from user and recipient 
+
   return (
     <div className='chatBody'>
         {messageReceived.map((message)=>

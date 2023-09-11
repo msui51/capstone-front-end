@@ -5,6 +5,9 @@ import Banner from '../Banner/Banner';
 import { Link } from 'react-router-dom';
 
 function GenreList({genres}) {
+
+  //list of the music genre and the banner
+
   return (
     <>
         <Banner/>

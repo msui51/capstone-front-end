@@ -11,7 +11,7 @@
     &__form-wrapper{
         margin: 1.5rem 6rem;
         padding: 2rem 6rem;
-        border:1px solid lightgrey;
+        border:1px solid $header-border;
         background-color: white;
         height: 70vh;
         border-radius: 0.5rem;
@@ -26,7 +26,7 @@
         padding: 0.5rem 0.5rem 0.5rem;
         border-radius: 0.5rem;
         border:none;
-        border:1px solid lightgray;
+        border:1px solid $header-border;
         &:first-of-type{
             margin-top: 0.5rem;
         }
@@ -42,9 +42,8 @@
         padding: 0.5rem 0.5rem 0.5rem;
         border-radius: 0.5rem;
         border: none;
-        // border: 1px solid #f18f01;
         &:focus{
-            outline: 1px solid #f18f01;
+            outline: 1px solid $error-contact-form;
         }
     }
     &__input--long{

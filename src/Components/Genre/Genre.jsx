@@ -1,7 +1,10 @@
 import React from 'react';
 import './genre.scss';
 
-function Genre({name, image}) {
+function Genre({name}) {
+
+//individual genres
+
   return (
     <div className='genre'>
         {name}

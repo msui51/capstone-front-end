@@ -6,6 +6,9 @@ import Banner from '../Banner/Banner';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 
 function ShowList({shows, socket}) {
+
+  // connect to socket
+
   const connectToSocket=()=>{
     socket.connect();
   }

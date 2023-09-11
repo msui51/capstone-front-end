@@ -1,8 +1,8 @@
 @import '../../Styles/variables';
 .chatBody{
     height:100%;
-    background-color: white;
-    border: 1px solid lightgray;
+    background-color: $secondary-background;
+    border: 1px solid $header-border;
     border-radius: 0.5rem;
     margin-right: 2.8rem;
     overflow: auto;
@@ -24,11 +24,11 @@
         border: 1px solid $third-color;
         border-radius: 20px;
         background-color: $third-color;
-        color:white;
+        color:$secondary-background;
     }
     &__message-recipient{
-        border: 1px solid lightgray;
-        background-color: lightgray;
+        border: 1px solid $header-border;
+        background-color: $header-border;
         border-radius: 20px;
     }
 }

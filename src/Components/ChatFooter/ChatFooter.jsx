@@ -1,25 +1,9 @@
 import React from 'react';
 import './chatFooter.scss';
-import { useState } from 'react';
 
 function ChatFooter({ message, sendMessage, handleMessageChange}) {
-    // const [message, setMessage]=useState('');
-    // const handleMessageChange=(e)=>{
-    //     setMessage(e.target.value);
-    // }
-    // const handleSendMessage=(e)=>{
-    //     e.preventDefault();
-    //     console.log({username: localStorage.getItem('username'), message})
-    //     if(localStorage.getItem('username')){
-    //         socket.emit('message', {
-    //             text:message,
-    //             name:localStorage.getItem('username'),
-    //             socketID:socket.id,
-    //             id: socket.id,
-    //         });
-    //     }
-    //     setMessage('')
-    // }
+
+//write and send message
 
   return (
     <div className='chatFooter'>

@@ -2,7 +2,6 @@
 @import '../../Styles//variables';
 
 .chatFooter{
-    // width:98%;
     width: 95%;
     display: flex;
     margin-bottom: 3rem;
@@ -12,7 +11,7 @@
         border-radius: 0.5rem;
         padding-left: 1rem;
         padding-top: 0.5rem;
-        border: 1px solid lightgray;
+        border: 1px solid $header-border;
         &:hover{
             border-color: $header-background;
         }

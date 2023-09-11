@@ -6,6 +6,9 @@ import AboutPagePic1 from '../../Assets/Images/capstone-pic-7.jpg';
 import Contact from '../../Components/Contact/Contact';
 
 function AboutPage() {
+
+  //about page includes contact form
+  
   return (
     <>
       <Header/>

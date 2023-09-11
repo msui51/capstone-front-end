@@ -1,8 +1,10 @@
 import React from 'react';
 import './banner.scss';
-import { useLocation } from 'react-router-dom';
 
 function Banner() {
+
+  //grabbing the username from login form
+  
     const username=sessionStorage.getItem('username');
   return (
     <>

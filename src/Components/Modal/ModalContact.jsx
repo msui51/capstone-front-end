@@ -3,6 +3,9 @@ import './modal.scss';
 import { WarningTwoIcon } from '@chakra-ui/icons';
 
 function ModalContact({closeContactModal}) {
+
+  // displays if invalid contact form
+  
   return (
     <div className='modal modal__contact' onClick={closeContactModal}>
         <div className='modal__box modal__contact-box'>

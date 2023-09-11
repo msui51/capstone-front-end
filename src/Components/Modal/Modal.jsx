@@ -3,6 +3,8 @@ import './modal.scss';
 import { WarningTwoIcon } from '@chakra-ui/icons';
 
 function Modal({closeModal}) {
+//displays if age is below 18
+
   return (
     <div className='modal' onClick={closeModal}>
         <div className='modal__box'>

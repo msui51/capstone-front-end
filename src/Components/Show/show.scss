@@ -4,14 +4,14 @@
     display: flex;
     justify-content: space-between;
     padding-left:4rem;
-    border-top: 1px solid lightslategray;
+    border-top: 1px solid $secondary-border;
     margin: 0 2rem;
     &--hover{
         cursor: pointer;
         background-color: $secondary-color;
         border-radius: 4px;
         transition: background-color 500ms;
-        color:white;
+        color:$secondary-background;
         &:focus{
             background-color: #ff2d00;
         }

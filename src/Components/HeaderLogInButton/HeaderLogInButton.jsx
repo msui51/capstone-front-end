@@ -3,6 +3,9 @@ import './headerLogInButton.scss';
 import { Link } from 'react-router-dom';
 
 function HeaderLogInButton() {
+
+//login button for header
+
   return (
     <>
         <Link className='headerLogInButton' to='/login'>

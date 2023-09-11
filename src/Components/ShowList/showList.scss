@@ -21,9 +21,9 @@
     }
     &__wrapper{
         margin: 0 4rem 0 3rem;
-        border: 1px solid lightslategray;
+        border: 1px solid $secondary-border;
         border-radius: 4px;
-        background-color: white;
+        background-color: $secondary-background;
     }
     &__sub-titles-wrapper{
         display: flex;
@@ -34,10 +34,10 @@
     &__sub-titles{
         display: inline;
         width: 25%;   
-        color: darkslategray; 
+        color: $border-color;
     }
     &__show-link{
         text-decoration: none;
-        color: darkslategray;
+        color: $border-color;
     }
 }

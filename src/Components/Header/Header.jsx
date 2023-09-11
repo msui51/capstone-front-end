@@ -8,7 +8,13 @@ import HeaderLeaveChatButton from '../HeaderLeaveChatButton/HeaderLeaveChatButto
 
 
 function Header() {
+
+//grabbing the url path
+
   const location = useLocation();
+
+//grabbing the dynamic url param
+
   const {id, dj} = useParams();
 
   return (

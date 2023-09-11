@@ -13,28 +13,41 @@ function Contact() {
   const [openContactFormModal, setOpenContactFormModal] = useState(false);
   const navigate=useNavigate();
 
+  //change contact form name value
+
   const nameChangeHandler=(e)=>{
     setName(e.target.value);
     console.log(name);
   }
+
+//change contact form email value
+
   const emailChangeHandler=(e)=>{
     setEmail(e.target.value);
     console.log(email);
   }
+
+//change contact form message value
+
   const messageChangeHandler=(e)=>{
     setMessage(e.target.value);
     console.log(message);
   }
+
+//navigate to home page
+
   const navigateHome=(e)=>{
     e.preventDefault();
     navigate('/');
   }
+
+//submit contact form
+
   const handleSubmit=(event)=>{
     event.preventDefault();
     if(!name || !email || !message){
      setOpenContactFormModal(true);
       setError(true);
-      // alert('Please provide input for all fields')
     }
     axios.post('http://localhost:5000/contact', {
       name:name,
@@ -50,6 +63,9 @@ function Contact() {
       console.log(err);
     })
   }
+
+//style change for error name input
+
   const checkNameError=(error)=>{
     if(error){
       if(!name){
@@ -59,6 +75,9 @@ function Contact() {
       }
     }
   }
+
+  //style change for error email input
+
   const checkEmailError=(error)=>{
     if(error){
       if(!email){
@@ -68,6 +87,8 @@ function Contact() {
       }
     }
   }
+
+  //style change for error message input
   const checkMessageError=(error)=>{
     if(error){
       if(!message){
@@ -77,6 +98,9 @@ function Contact() {
       }
     }
   }
+
+  //close the modal
+  
   const closeContactModal=()=>{
     setOpenContactFormModal(false)
   }

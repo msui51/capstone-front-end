@@ -2,28 +2,24 @@ import React from 'react';
 import '../../Pages/HomePage/homePage.scss';
 import { LockIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './logInForm.scss';
 import Modal from '../Modal/Modal';
-import ModalUsername from '../Modal/ModalUsername';
 
 
 function LogInForm({socket}) {
   const [username, setUsername] = useState('');
   const [open, setOpen] = useState(false);
-  const [openUsernameModal, setOpenUsernameModal] = useState(false);
   const navigate = useNavigate();
+
+  // change username value
+
   const usernameChangeHandler=(e)=>{
     setUsername(e.target.value);
   }
-  // const radioButtonNotSelected=()=>{
-  //   const button = document.getElementsByName('age');
-  //   for(let i = 0; i < button.length; i++){
-  //     if(!button[i].checked){
-  //       return true
-  //     }
-  //   }
-  // }
+ 
+  // check if user is below 18
+
   const checkBelowEighteenAge=()=>{
     const button= document.getElementsByName('age');
       for(let i = 0; i < button.length; i++) {
@@ -32,12 +28,17 @@ function LogInForm({socket}) {
         }
       } 
   }
-  // const isLoginFormValid=()=>{
-  //   if(!username || radioButtonNotSelected()){
-  //     return false;
-  //   }
-  //   return true;
-  // }
+
+  //check is there's input for username
+
+  const checkInvalidUsername=()=>{
+    if(!username){
+      return true;
+    }
+  }
+ 
+//submitting the login form
+
   const handleSubmit=(e)=>{
     e.preventDefault();
     sessionStorage.setItem('username', username);
@@ -45,16 +46,14 @@ function LogInForm({socket}) {
       name: sessionStorage.getItem('username'),
       id: socket.id,
     })
-    console.log(username)
-    // if(!isLoginFormValid()){
-    //   alert('please provide all inputs')
-    // }else 
     if(checkBelowEighteenAge()){
       setOpen(true)
     }else{
     navigate('/selections');
     }
   }
+
+  // closing the modal
   const closeModal=()=>{
     setOpen(false);
   }
