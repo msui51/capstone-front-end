@@ -4,12 +4,14 @@ import { LockIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './logInForm.scss';
-import Modal from '../Modal/Modal';
+import UnderageModal from '../Modal/UnderageModal';
+import InvalidUsernameModal from '../Modal/InvalidUsernameModal';
 
 
 function LogInForm({socket}) {
   const [username, setUsername] = useState('');
-  const [open, setOpen] = useState(false);
+  const [underage, setUnderage] = useState(false);
+  const [invalidUsername, setInvalidUsername] = useState(false);
   const navigate = useNavigate();
 
   // change username value
@@ -47,7 +49,9 @@ function LogInForm({socket}) {
       id: socket.id,
     })
     if(checkBelowEighteenAge()){
-      setOpen(true)
+      setUnderage(true)
+    }else if(checkInvalidUsername()){
+      setInvalidUsername(true);
     }else{
     navigate('/selections');
     }
@@ -55,7 +59,8 @@ function LogInForm({socket}) {
 
   // closing the modal
   const closeModal=()=>{
-    setOpen(false);
+    setUnderage(false);
+    setInvalidUsername(false);
   }
 
   return (
@@ -82,7 +87,8 @@ function LogInForm({socket}) {
         </div>
         <button className='logInForm__button'>Log in</button>
       </form>
-      {open ? <Modal closeModal={closeModal}/> : null}
+      {underage ? <UnderageModal closeModal={closeModal}/> : null}
+      {invalidUsername ? <InvalidUsernameModal closeModal={closeModal}/> : null}
     </div>
   )
 }

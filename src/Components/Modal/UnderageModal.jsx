@@ -2,7 +2,7 @@ import React from 'react';
 import './modal.scss';
 import { WarningTwoIcon } from '@chakra-ui/icons';
 
-function Modal({closeModal}) {
+function UnderageModal({closeModal}) {
 //displays if age is below 18
 
   return (
@@ -20,4 +20,4 @@ function Modal({closeModal}) {
   )
 }
 
-export default Modal
+export default UnderageModal
