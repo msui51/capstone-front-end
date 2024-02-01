@@ -48,7 +48,6 @@ function ChatPage({socket}) {
 
   return (
     <div className='chatPage'>
-      //
       {/* <ChatSideBar users={users}/> */}
       <div className='chatPage__main'>
           <Header/>
