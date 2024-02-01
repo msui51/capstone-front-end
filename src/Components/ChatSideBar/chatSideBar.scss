@@ -2,7 +2,11 @@
 
 .chatSideBar{
     border-right:1px solid $header-border;
+    padding-left: 1rem;
+    padding-top: 24px;
     &__wrapper{
         display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }

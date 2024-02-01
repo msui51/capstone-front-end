@@ -48,7 +48,7 @@ function ChatPage({socket}) {
 
   return (
     <div className='chatPage'>
-      {/* <ChatSideBar users={users}/> */}
+      <ChatSideBar users={users}/>
       <div className='chatPage__main'>
           <Header/>
           <ChatBody messageReceived={messageReceived}/>
