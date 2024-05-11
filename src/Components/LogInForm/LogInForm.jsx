@@ -19,17 +19,19 @@ function LogInForm({socket}) {
   const usernameChangeHandler=(e)=>{
     setUsername(e.target.value);
   }
+
  
   // check if user is below 18
 
   const checkBelowEighteenAge=()=>{
     const button= document.getElementsByName('age');
       for(let i = 0; i < button.length; i++) {
-        if(button[i].checked && button[i].value == 'no'){
+        if(button[i].checked && button[i].value === 'no'){
           return true;
         }
       } 
   }
+
 
   //check is there's input for username
 
@@ -48,10 +50,10 @@ function LogInForm({socket}) {
       name: sessionStorage.getItem('username'),
       id: socket.id,
     })
-    if(checkBelowEighteenAge()){
-      setUnderage(true)
-    }else if(checkInvalidUsername()){
+    if(checkInvalidUsername()){
       setInvalidUsername(true);
+    }else if(checkBelowEighteenAge()){
+      setUnderage(true)
     }else{
     navigate('/selections');
     }
