@@ -49,7 +49,7 @@ function Contact() {
      setOpenContactFormModal(true);
       setError(true);
     }
-    axios.post('http://localhost:5000/contact', {
+    axios.post('https://capstone-back-end-8abd12be2c11.herokuapp.com/contact', {
       name:name,
       email_address: email,
       message: message,
