@@ -16,7 +16,7 @@ function SelectionsPage({socket}) {
 //grabbing data for list of genres
 
   useEffect(()=>{
-    axios.get('http://localhost:5000/selections')
+    axios.get('https://capstone-back-end-8abd12be2c11.herokuapp.com/selections')
     .then((response)=>{
       setGenres(response.data);
     });
@@ -25,7 +25,7 @@ function SelectionsPage({socket}) {
 // grabbing data for list of shows
 
   useEffect(()=>{
-    axios.get(`http://localhost:5000/selections/${id}`)
+    axios.get(`https://capstone-back-end-8abd12be2c11.herokuapp.com/selections/${id}`)
     .then((response)=>{
       setShows(response.data)
     });
