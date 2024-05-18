@@ -28,10 +28,10 @@ function GenreList({genres}) {
             </ul>
 
             <div className='genreList__images'>
-              <img className='genreList__image'src='http://localhost:5000/images/tech-house.jpeg' alt='rave venue'></img>
-              <img className='genreList__image'src='http://localhost:5000/images/techno.jpeg' alt='techno scene'></img>
-              <img className='genreList__image'src='http://localhost:5000/images/drum-and-bass.jpeg' alt='techno scene'></img>
-              <img className='genreList__image'src='http://localhost:5000/images/melodic-house.jpeg' alt='techno scene'></img>
+              <img className='genreList__image'src='https://capstone-back-end-8abd12be2c11.herokuapp.com/images/tech-house.jpeg' alt='rave venue'></img>
+              <img className='genreList__image'src='https://capstone-back-end-8abd12be2c11.herokuapp.com/images/techno.jpeg' alt='techno scene'></img>
+              <img className='genreList__image'src='https://capstone-back-end-8abd12be2c11.herokuapp.com/images/drum-and-bass.jpeg' alt='techno scene'></img>
+              <img className='genreList__image'src='https://capstone-back-end-8abd12be2c11.herokuapp.com/images/melodic-house.jpeg' alt='techno scene'></img>
             </div>
           </div>
     </>
