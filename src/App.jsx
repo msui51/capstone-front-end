@@ -6,7 +6,10 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import './app.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import io from 'socket.io-client';
-const socket= io.connect('https://peppy-crumble-09a2e4.netlify.app/', {autoConnect: false});
+const socket = io("//url",{
+         transports: ['websocket'],
+        });
+// const socket= io.connect('https://peppy-crumble-09a2e4.netlify.app/', {autoConnect: false});
 
 function App() {
   
