@@ -6,7 +6,7 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import './app.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import io from 'socket.io-client';
-const socket= io.connect('https://peppy-crumble-09a2e4.netlify.app/:dj', {autoConnect: false});
+const socket= io.connect('https://capstone-back-end-8abd12be2c11.herokuapp.com/', {autoConnect: false});
 
 function App() {
   
